@@ -16,29 +16,27 @@
 
 @implementation HCHalftone
 
--(NSImage *) AML: (NSImage *) img
+-(NSImage *) AM: (NSImage *) img AMType: (NSInteger) type
 {
     Timer timer("AML Full block");
     NSInteger newHeight;
     NSInteger newWidth;
     
-    unsigned int Height;
-    unsigned int Width;
+    NSInteger height;
+    NSInteger width;
     
     // Get name for new image
     NSString *newFileName = [[img name] stringByAppendingString: @"_AML.png"];
 
     //Get Image size
-    @autoreleasepool {
-        NSImageRep *rep = [[img representations] objectAtIndex:0];
-        NSSize imageSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
+    NSImageRep *rep = [[img representations] objectAtIndex:0];
+    NSSize imageSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
             
-        newHeight = 16 * (NSInteger)imageSize.height;
-        newWidth  = 16 * (NSInteger)imageSize.width;
+    newHeight = 16 * (NSInteger)imageSize.height;
+    newWidth  = 16 * (NSInteger)imageSize.width;
         
-        Height = (unsigned int)imageSize.height;
-        Width  = (unsigned int)imageSize.width;
-    }
+    height = (NSInteger)imageSize.height;
+    width  = (NSInteger)imageSize.width;
     
     // Create new image bitmap
     NSBitmapImageRep *greyRep =
@@ -79,7 +77,7 @@
         }
                         
         // compute halftone
-        AMLinear([rawImg bitmapData], Width, Height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow]);
+        FMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
         
 
                 
@@ -106,17 +104,14 @@
     if (![sourceImage isValid]){
         NSLog(@"Invalid Image");
     } else {
-        NSImage *smallImage = [[NSImage alloc] initWithSize: NSMakeSize(Width, Height)];
+        NSImage *smallImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
         [smallImage lockFocus];
-        [sourceImage setSize: NSMakeSize(Width, Height)];
+        [sourceImage setSize: NSMakeSize(width, height)];
         [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, NSMakeSize(Width, Height).width, NSMakeSize(Width, Height).height) operation:NSCompositingOperationCopy fraction:1.0];
+        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, NSMakeSize(width, height).width, NSMakeSize(width, height).height) operation:NSCompositingOperationCopy fraction:1.0];
         [smallImage unlockFocus];
         img = smallImage;
     }
-    
-
-    
     return img;
 }
 

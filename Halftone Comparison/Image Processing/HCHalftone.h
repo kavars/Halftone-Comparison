@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HCHalftone : NSObject
 
--(NSImage *) AML: (NSImage *) img;
+-(NSImage *) AM: (NSImage *) img AMType: (NSInteger) type;
 
 @end
 

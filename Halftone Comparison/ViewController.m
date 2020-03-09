@@ -66,7 +66,7 @@
             dispatch_queue_t AMLConcurrentQueue = dispatch_queue_create("AMLinear", DISPATCH_QUEUE_CONCURRENT);
             
             dispatch_async(AMLConcurrentQueue, ^{
-                self->img = [self->Halftone AML: self->img];
+                self->img = [self->Halftone AM: self->img AMType: 0];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self updateView];
