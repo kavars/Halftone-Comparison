@@ -16,17 +16,17 @@
 
 @implementation HCHalftone
 
--(NSImage *) AM: (NSImage *) img AMType: (NSInteger) type
+-(NSImage *) Halftone:(NSImage *)img HalftoneType:(NSInteger)type
 {
-    Timer timer("AML Full block");
+    Timer timer("Halftone block");
     NSInteger newHeight;
     NSInteger newWidth;
     
     NSInteger height;
     NSInteger width;
     
-    // Get name for new image
-    NSString *newFileName = [[img name] stringByAppendingString: @"_AML.png"];
+    // Name for new image
+    NSString *newFileName = [NSString string];
 
     //Get Image size
     NSImageRep *rep = [[img representations] objectAtIndex:0];
@@ -75,14 +75,29 @@
             default:
                 break;
         }
-                        
-        // compute halftone
-        FMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
-        
 
-                
+        // compute halftone and get new name
+        switch (type) {
+            case 0:
+                newFileName = [[img name] stringByAppendingString: @"_AML.png"];
+                AMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
+                break;
+            case 1:
+                newFileName = [[img name] stringByAppendingString: @"_AMTI.png"];
+                AMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
+                break;
+            case 2:
+                newFileName = [[img name] stringByAppendingString: @"_FML.png"];
+                FMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
+                break;
+            case 3:
+                newFileName = [[img name] stringByAppendingString: @"_FMTI.png"];
+                FMHalftone([rawImg bitmapData], width, height, [greyRep bitmapData], elementsPerPixel, [greyRep bytesPerRow], [rawImg bytesPerRow], type);
+                break;
+        }
+                        
     }
-    
+
     // Save new image
     dispatch_queue_t SaveConcurrentQueue = dispatch_queue_create("AMSave", DISPATCH_QUEUE_CONCURRENT);
     
@@ -90,28 +105,13 @@
         NSData *data = [greyRep representationUsingType: NSBitmapImageFileTypePNG properties: [NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:1.0] forKey:NSImageCompressionFactor]];
             
         [data writeToFile: newFileName atomically: NO];
+        [img setName: nil];
     });
     
     // update old image
     img = [[NSImage alloc] initWithSize: NSMakeSize(newWidth, newHeight)];
     [img addRepresentation: [greyRep copy] ];
 
-    
-    // Resize
-    NSImage *sourceImage = img;
-
-    // Report an error if the source isn't a valid image
-    if (![sourceImage isValid]){
-        NSLog(@"Invalid Image");
-    } else {
-        NSImage *smallImage = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
-        [smallImage lockFocus];
-        [sourceImage setSize: NSMakeSize(width, height)];
-        [[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-        [sourceImage drawAtPoint:NSZeroPoint fromRect:CGRectMake(0, 0, NSMakeSize(width, height).width, NSMakeSize(width, height).height) operation:NSCompositingOperationCopy fraction:1.0];
-        [smallImage unlockFocus];
-        img = smallImage;
-    }
     return img;
 }
 

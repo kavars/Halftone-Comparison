@@ -12,8 +12,14 @@
 
 - (IBAction)TAP:(NSButton *)sender;
 
+@property (weak) IBOutlet NSPopUpButton *halftoneType;
+
 @property (weak) IBOutlet NSImageView *imageView;
 @property (weak) IBOutlet NSProgressIndicator *progressBar;
+
+- (IBAction)typesPopUp:(NSPopUpButton *)sender;
+
+-(void) buildPopUpButton;
 
 @end
 

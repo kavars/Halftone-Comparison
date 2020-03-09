@@ -12,39 +12,6 @@
 
 #pragma mark - AM
 
-/*!
-* @function AMHalftone
-*
-* @abstract
-* Amplitude modulation Halftone
-*
-*
-* @param image
-* Source raw image data
-*
-* @param width
-* Source image width
- 
-* @param height
-* Source image height
-*
-* @param newImg
-* Destination raw image data
-*
-* @param bitsPerPixel
-* Bits per pixel in source image
-*
-* @param rowBytesDest
-* Row bytes in destination image
-*
-* @param rowBytesSrc
-* Row bytes in source image
-*
-* @param AMType
-* Amplitude modulation method
-* 0 - Linear method
-* 1 - Tone increase method
-*/
 void AMHalftone(unsigned char* image, size_t width , size_t height, unsigned char* newImg, size_t bitsPerPixel, size_t rowBytesDest, size_t rowBytesSrc, size_t AMType) {
 
     Timer timer("AM");
@@ -74,8 +41,7 @@ void AMHalftone(unsigned char* image, size_t width , size_t height, unsigned cha
         {
             int pixel = static_cast<int>(image[i * rowBytesSrc + j]);
             
-//            iso 12647-2
-            // Tone increase method
+            // Tone increase method - iso 12647-2
             if (AMType == 1) {
                 if (pixel < 13) { // 5%
                     pixel -= pixel * 0.046;
@@ -120,38 +86,6 @@ void AMHalftone(unsigned char* image, size_t width , size_t height, unsigned cha
 
 #pragma mark - FM
 
-/*!
-* @function FMHalftone
-*
-* @abstract
-* Frequency modulation Halftone
-*
-* @param image
-* Source raw image data
-*
-* @param width
-* Source image width
- 
-* @param height
-* Source image height
-*
-* @param newImg
-* Destination raw image data
-*
-* @param bitsPerPixel
-* Bits per pixel in source image
-*
-* @param rowBytesDest
-* Row bytes in destination image
-*
-* @param rowBytesSrc
-* Row bytes in source image
-*
-* @param FMType
-* Frequency modulation method
-* 0 - Linear method
-* 1 - Tone increase method
-*/
 void FMHalftone(unsigned char* image, size_t width , size_t height, unsigned char* newImg, size_t bitsPerPixel, size_t rowBytesDest, size_t rowBytesSrc, size_t FMType) {
 
     Timer timer("FM");
@@ -204,9 +138,8 @@ void FMHalftone(unsigned char* image, size_t width , size_t height, unsigned cha
         {
             int pixel = static_cast<int>(image[i * rowBytesSrc + j]);
             
-//            iso 12647-2
-            // Tone increase method
-            if (FMType == 1) {
+            // Tone increase method - iso 12647-2
+            if (FMType == 3) {
                 if (pixel < 13) { // 5%
                     pixel -= pixel * 0.068;
                 } else if (pixel < 26) { // 10%

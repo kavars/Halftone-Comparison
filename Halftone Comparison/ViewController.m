@@ -9,14 +9,19 @@
 #import "ViewController.h"
 
 #import "HCHalftone.h"
+#import "HCImageResize.h"
 
 @interface ViewController ()
 {
     IBOutlet NSButton *buttonOutlet;
     
+    
+    NSInteger halftoneMethod;
+    
     NSImage *img;
     
     HCHalftone *Halftone;
+    HCImageResize *Resizer;
 }
 @end
 
@@ -25,11 +30,16 @@
 @synthesize imageView;
 @synthesize progressBar;
 
+@synthesize halftoneType;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     Halftone = [[HCHalftone alloc] init];
+    Resizer  = [[HCImageResize alloc] init];
     progressBar.doubleValue = 0.0;
+    halftoneMethod = 0;
+    [self buildPopUpButton];
 //    img = [[NSImage alloc] init];
     // Do any additional setup after loading the view.
 }
@@ -66,11 +76,12 @@
             dispatch_queue_t AMLConcurrentQueue = dispatch_queue_create("AMLinear", DISPATCH_QUEUE_CONCURRENT);
             
             dispatch_async(AMLConcurrentQueue, ^{
-                self->img = [self->Halftone AM: self->img AMType: 0];
-                
+                self->img = [self->Halftone Halftone: self->img HalftoneType: self->halftoneMethod];
+                self->img = [self->Resizer ResizeImage: self->img Width:500 andHeight:500];
+
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self updateView];
-//                    self->progressBar.doubleValue = 100.0;
+//                    self->progressBar.doubleValue = 50.0;
                 });
             });
             
@@ -86,8 +97,9 @@
 
 - (void) openImg: (NSURL *) path {
     img = [[NSImage alloc] initWithContentsOfFile: path.path];
-    
+
     [img setName: [[path URLByDeletingPathExtension] lastPathComponent]];
+    
 }
 
 - (void) updateView {
@@ -95,7 +107,23 @@
 }
 
 
+-(void) buildPopUpButton
+{
+    [halftoneType removeAllItems];
+    
+    NSArray *typesLables = @[@"AM Linear", @"AM Tone increase", @"FM Linear", @"FM Tone increase"];
 
+    [halftoneType addItemsWithTitles: typesLables];
+    
+    halftoneType.target = self;
+    halftoneType.action = @selector(typesPopUp:);
+}
+
+- (IBAction)typesPopUp:(NSPopUpButton *)sender {
+    
+    halftoneMethod = sender.indexOfSelectedItem;
+
+}
 
 
 @end

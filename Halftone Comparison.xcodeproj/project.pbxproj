@@ -13,6 +13,7 @@
 		7E1F8F722412A77C00D17F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1F8F702412A77C00D17F77 /* Main.storyboard */; };
 		7E1F8F752412A77C00D17F77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1F8F742412A77C00D17F77 /* main.m */; };
 		7E5F283A2414074F0013296A /* HCHalftone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F28392414074F0013296A /* HCHalftone.mm */; };
+		7E6648922416E1F7000527B6 /* HCImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6648912416E1F7000527B6 /* HCImageResize.m */; };
 		7E7497CB2412E3970081D39A /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E7497CA2412E3970081D39A /* Timer.cpp */; };
 		7EC2D2562415530C00910B93 /* halftoneFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2D2542415530C00910B93 /* halftoneFunc.cpp */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,8 @@
 		7E1F8F762412A77C00D17F77 /* Halftone_Comparison.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Halftone_Comparison.entitlements; sourceTree = "<group>"; };
 		7E5F28382414074F0013296A /* HCHalftone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHalftone.h; sourceTree = "<group>"; };
 		7E5F28392414074F0013296A /* HCHalftone.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHalftone.mm; sourceTree = "<group>"; };
+		7E6648902416E1F7000527B6 /* HCImageResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCImageResize.h; sourceTree = "<group>"; };
+		7E6648912416E1F7000527B6 /* HCImageResize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCImageResize.m; sourceTree = "<group>"; };
 		7E7497C92412E3970081D39A /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		7E7497CA2412E3970081D39A /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		7EC2D2542415530C00910B93 /* halftoneFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = halftoneFunc.cpp; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				7EC2D2552415530C00910B93 /* halftoneFunc.h */,
 				7E5F28382414074F0013296A /* HCHalftone.h */,
 				7E5F28392414074F0013296A /* HCHalftone.mm */,
+				7E6648902416E1F7000527B6 /* HCImageResize.h */,
+				7E6648912416E1F7000527B6 /* HCImageResize.m */,
 			);
 			path = "Image Processing";
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 				7E1F8F752412A77C00D17F77 /* main.m in Sources */,
 				7E7497CB2412E3970081D39A /* Timer.cpp in Sources */,
 				7E5F283A2414074F0013296A /* HCHalftone.mm in Sources */,
+				7E6648922416E1F7000527B6 /* HCImageResize.m in Sources */,
 				7E1F8F6A2412A77900D17F77 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +309,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 82CJ7XMF7V;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "Halftone Comparison/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
