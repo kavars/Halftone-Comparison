@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E1F8F6A2412A77900D17F77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1F8F692412A77900D17F77 /* AppDelegate.m */; };
+		7E1F8F6D2412A77900D17F77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1F8F6C2412A77900D17F77 /* ViewController.m */; };
+		7E1F8F6F2412A77C00D17F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1F8F6E2412A77C00D17F77 /* Assets.xcassets */; };
+		7E1F8F722412A77C00D17F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1F8F702412A77C00D17F77 /* Main.storyboard */; };
+		7E1F8F752412A77C00D17F77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1F8F742412A77C00D17F77 /* main.m */; };
+		7E5F283A2414074F0013296A /* HCHalftone.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F28392414074F0013296A /* HCHalftone.mm */; };
+		7E7497CB2412E3970081D39A /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E7497CA2412E3970081D39A /* Timer.cpp */; };
+		7EC2D2562415530C00910B93 /* halftoneFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2D2542415530C00910B93 /* halftoneFunc.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E1F8F652412A77900D17F77 /* Halftone Comparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halftone Comparison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1F8F682412A77900D17F77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7E1F8F692412A77900D17F77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7E1F8F6B2412A77900D17F77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7E1F8F6C2412A77900D17F77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7E1F8F6E2412A77C00D17F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E1F8F712412A77C00D17F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E1F8F732412A77C00D17F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E1F8F742412A77C00D17F77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E1F8F762412A77C00D17F77 /* Halftone_Comparison.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Halftone_Comparison.entitlements; sourceTree = "<group>"; };
+		7E5F28382414074F0013296A /* HCHalftone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHalftone.h; sourceTree = "<group>"; };
+		7E5F28392414074F0013296A /* HCHalftone.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHalftone.mm; sourceTree = "<group>"; };
+		7E7497C92412E3970081D39A /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		7E7497CA2412E3970081D39A /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		7EC2D2542415530C00910B93 /* halftoneFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = halftoneFunc.cpp; sourceTree = "<group>"; };
+		7EC2D2552415530C00910B93 /* halftoneFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halftoneFunc.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E1F8F622412A77900D17F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E1F8F5C2412A77900D17F77 = {
+			isa = PBXGroup;
+			children = (
+				7E1F8F672412A77900D17F77 /* Halftone Comparison */,
+				7E1F8F662412A77900D17F77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E1F8F662412A77900D17F77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E1F8F652412A77900D17F77 /* Halftone Comparison.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E1F8F672412A77900D17F77 /* Halftone Comparison */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F2837241406E80013296A /* Image Processing */,
+				7E7497CA2412E3970081D39A /* Timer.cpp */,
+				7E7497C92412E3970081D39A /* Timer.hpp */,
+				7E1F8F682412A77900D17F77 /* AppDelegate.h */,
+				7E1F8F6C2412A77900D17F77 /* ViewController.m */,
+				7E1F8F692412A77900D17F77 /* AppDelegate.m */,
+				7E1F8F6B2412A77900D17F77 /* ViewController.h */,
+				7E1F8F6E2412A77C00D17F77 /* Assets.xcassets */,
+				7E1F8F702412A77C00D17F77 /* Main.storyboard */,
+				7E1F8F732412A77C00D17F77 /* Info.plist */,
+				7E1F8F742412A77C00D17F77 /* main.m */,
+				7E1F8F762412A77C00D17F77 /* Halftone_Comparison.entitlements */,
+			);
+			path = "Halftone Comparison";
+			sourceTree = "<group>";
+		};
+		7E5F2837241406E80013296A /* Image Processing */ = {
+			isa = PBXGroup;
+			children = (
+				7EC2D2542415530C00910B93 /* halftoneFunc.cpp */,
+				7EC2D2552415530C00910B93 /* halftoneFunc.h */,
+				7E5F28382414074F0013296A /* HCHalftone.h */,
+				7E5F28392414074F0013296A /* HCHalftone.mm */,
+			);
+			path = "Image Processing";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E1F8F642412A77900D17F77 /* Halftone Comparison */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E1F8F792412A77C00D17F77 /* Build configuration list for PBXNativeTarget "Halftone Comparison" */;
+			buildPhases = (
+				7E1F8F612412A77900D17F77 /* Sources */,
+				7E1F8F622412A77900D17F77 /* Frameworks */,
+				7E1F8F632412A77900D17F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Halftone Comparison";
+			productName = "Halftone Comparison";
+			productReference = 7E1F8F652412A77900D17F77 /* Halftone Comparison.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E1F8F5D2412A77900D17F77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Kirill Varshamov";
+				TargetAttributes = {
+					7E1F8F642412A77900D17F77 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 7E1F8F602412A77900D17F77 /* Build configuration list for PBXProject "Halftone Comparison" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E1F8F5C2412A77900D17F77;
+			productRefGroup = 7E1F8F662412A77900D17F77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E1F8F642412A77900D17F77 /* Halftone Comparison */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E1F8F632412A77900D17F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E1F8F6F2412A77C00D17F77 /* Assets.xcassets in Resources */,
+				7E1F8F722412A77C00D17F77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E1F8F612412A77900D17F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EC2D2562415530C00910B93 /* halftoneFunc.cpp in Sources */,
+				7E1F8F6D2412A77900D17F77 /* ViewController.m in Sources */,
+				7E1F8F752412A77C00D17F77 /* main.m in Sources */,
+				7E7497CB2412E3970081D39A /* Timer.cpp in Sources */,
+				7E5F283A2414074F0013296A /* HCHalftone.mm in Sources */,
+				7E1F8F6A2412A77900D17F77 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7E1F8F702412A77C00D17F77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E1F8F712412A77C00D17F77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E1F8F772412A77C00D17F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7E1F8F782412A77C00D17F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7E1F8F7A2412A77C00D17F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Halftone Comparison/Halftone_Comparison.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 82CJ7XMF7V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INFOPLIST_FILE = "Halftone Comparison/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaviro.Halftone-Comparison";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E1F8F7B2412A77C00D17F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Halftone Comparison/Halftone_Comparison.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 82CJ7XMF7V;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Halftone Comparison/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Kaviro.Halftone-Comparison";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E1F8F602412A77900D17F77 /* Build configuration list for PBXProject "Halftone Comparison" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1F8F772412A77C00D17F77 /* Debug */,
+				7E1F8F782412A77C00D17F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E1F8F792412A77C00D17F77 /* Build configuration list for PBXNativeTarget "Halftone Comparison" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1F8F7A2412A77C00D17F77 /* Debug */,
+				7E1F8F7B2412A77C00D17F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E1F8F5D2412A77900D17F77 /* Project object */;
+}
