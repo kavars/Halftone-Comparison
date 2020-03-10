@@ -16,6 +16,7 @@
 		7E6648922416E1F7000527B6 /* HCImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6648912416E1F7000527B6 /* HCImageResize.m */; };
 		7E7497CB2412E3970081D39A /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E7497CA2412E3970081D39A /* Timer.cpp */; };
 		7EC2D2562415530C00910B93 /* halftoneFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2D2542415530C00910B93 /* halftoneFunc.cpp */; };
+		7EDD3A87241773ED006D2C99 /* HCGaussBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDD3A86241773ED006D2C99 /* HCGaussBlur.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		7E7497CA2412E3970081D39A /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		7EC2D2542415530C00910B93 /* halftoneFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = halftoneFunc.cpp; sourceTree = "<group>"; };
 		7EC2D2552415530C00910B93 /* halftoneFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = halftoneFunc.h; sourceTree = "<group>"; };
+		7EDD3A85241773ED006D2C99 /* HCGaussBlur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGaussBlur.h; sourceTree = "<group>"; };
+		7EDD3A86241773ED006D2C99 /* HCGaussBlur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGaussBlur.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				7E5F28392414074F0013296A /* HCHalftone.mm */,
 				7E6648902416E1F7000527B6 /* HCImageResize.h */,
 				7E6648912416E1F7000527B6 /* HCImageResize.m */,
+				7EDD3A85241773ED006D2C99 /* HCGaussBlur.h */,
+				7EDD3A86241773ED006D2C99 /* HCGaussBlur.m */,
 			);
 			path = "Image Processing";
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				7EC2D2562415530C00910B93 /* halftoneFunc.cpp in Sources */,
 				7E1F8F6D2412A77900D17F77 /* ViewController.m in Sources */,
 				7E1F8F752412A77C00D17F77 /* main.m in Sources */,
+				7EDD3A87241773ED006D2C99 /* HCGaussBlur.m in Sources */,
 				7E7497CB2412E3970081D39A /* Timer.cpp in Sources */,
 				7E5F283A2414074F0013296A /* HCHalftone.mm in Sources */,
 				7E6648922416E1F7000527B6 /* HCImageResize.m in Sources */,

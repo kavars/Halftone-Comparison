@@ -10,10 +10,12 @@
 
 #import "HCHalftone.h"
 #import "HCImageResize.h"
+#import "HCGaussBlur.h"
 
 @interface ViewController ()
 {
     IBOutlet NSButton *buttonOutlet;
+    
     
     
     NSInteger halftoneMethod;
@@ -22,6 +24,7 @@
     
     HCHalftone *Halftone;
     HCImageResize *Resizer;
+    HCGaussBlur *gaussianBlur;
 }
 @end
 
@@ -37,6 +40,7 @@
 
     Halftone = [[HCHalftone alloc] init];
     Resizer  = [[HCImageResize alloc] init];
+    gaussianBlur = [[HCGaussBlur alloc] init];
     progressBar.doubleValue = 0.0;
     halftoneMethod = 0;
     [self buildPopUpButton];
@@ -78,7 +82,8 @@
             dispatch_async(AMLConcurrentQueue, ^{
                 self->img = [self->Halftone Halftone: self->img HalftoneType: self->halftoneMethod];
                 self->img = [self->Resizer ResizeImage: self->img Width:500 andHeight:500];
-
+                self->img = [self->gaussianBlur sepiaFilterImage: self->img withIntensity: 5.0];
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self updateView];
 //                    self->progressBar.doubleValue = 50.0;
